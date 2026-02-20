@@ -19,7 +19,7 @@ A live demo is at <https://heysh.xyz/hugo-theme-tokiwa/>.
 
 Inside the folder of your Hugo site run:
 ```bash
-$ git submodule add https://github.com/heyeshuang/hugo-theme-tokiwa.git themes/hugo-theme-tokiwa
+$ git submodule add https://github.com/daebfcg/hugo-theme-tokiwa.git themes/hugo-theme-tokiwa
 ```
 
 ### Hugo module
@@ -27,7 +27,7 @@ $ git submodule add https://github.com/heyeshuang/hugo-theme-tokiwa.git themes/h
 Inside the folder of your Hugo site run:
 ```bash
 $ hugo mod init https://github.com/<YOUR_NAME>/<THEME_NAME>
-$ hugo mod get https://github.com/heyeshuang/hugo-theme-tokiwa
+$ hugo mod get github.com/daebfcg/hugo-theme-tokiwa
 ```
 
 Then add to your `hugo.toml`:
