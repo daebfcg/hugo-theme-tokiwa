@@ -5,7 +5,7 @@
     {{ $series := .Params.series }}
 
     {{ if $series }}
-        {{ $pages := where .Site.RegularPages "Params.series" $series }}
+        {{ $pages := where .Site.RegularPages "Params.series" "intersect" $series }}
 
         {{ $prevPage := "" }}
         {{ $nextPage := "" }}
