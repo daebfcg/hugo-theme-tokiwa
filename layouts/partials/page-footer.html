@@ -4,9 +4,9 @@
     {{ $currentPage := . }}
     {{ $series := .Params.series }}
 
-    {{ with $series}}
-<span>{{.}}</span>
-    {{ end }}
+   
+<span>{{$series}}</span>
+    
 
     {{ if $series }}
         {{ $pages := where .Site.RegularPages "Params.series" "intersect" $series }}
