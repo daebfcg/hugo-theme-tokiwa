@@ -4,6 +4,10 @@
     {{ $currentPage := . }}
     {{ $series := .Params.series }}
 
+    {{ with $series}}
+<spam>{{.}}</spam>
+    {{ end }}
+
     {{ if $series }}
         {{ $pages := where .Site.RegularPages "Params.series" "intersect" $series }}
 
