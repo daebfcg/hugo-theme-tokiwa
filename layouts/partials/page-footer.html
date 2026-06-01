@@ -1,37 +1,5 @@
 <hr class="double-line" />
-<h4>TESt</h4>
 <div class="flex flex-wrap justify-between pb-2 leading-loose font-serif">
-
-    {{ $currentPage := . }}
-    {{ $series := .Params.series }}
-    
-
-    {{ if $series }}
-        {{ $pages := where .Site.RegularPages "Params.series" "intersect" $series }}
-
-        {{ $prevPage := "" }}
-        {{ $nextPage := "" }}
-
-        {{ range $pages }}
-            {{ if eq . $currentPage }}
-                {{ $prevPage = $.Scratch.Get "prevPage" }}
-                {{ $.Scratch.Set "prevPage" . }}
-            {{ else if $.Scratch.Get "prevPage" }}
-                {{ $nextPage = . }}
-            {{ end }}
-        {{ end }}
-
-        {{ with $prevPage }}
-            <a href="{{ .Permalink }}">Previous: {{ .Title }}</a>
-        {{ end }}
-
-        {{ with $nextPage }}
-            <a href="{{ .Permalink }}">Next: {{ .Title }}</a>
-        {{ end }}
-    {{ end }}
-
-
-
     {{with .Site.RegularPages.Prev . }}
     <a class="flex-grow-0" href="{{.RelPermalink}}">
         <svg class="fill-current inline-block h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
